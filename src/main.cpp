@@ -7,7 +7,7 @@
 #include <Eigen/Dense>
 
 int main(){
-
+	auto start = std::chrono::system_clock::now();
 	//define a source list
 	std::vector<ScalorPotential::srcStruct> src_list;
 
@@ -75,12 +75,12 @@ int main(){
 	Eigen::Vector3d test_point(-2,0,0);
 	//std::cout << tunnel.getState(test_point).value << std::endl;
 
-	auto start = std::chrono::system_clock::now();
+	// auto start = std::chrono::system_clock::now();
 	for(int i=0;i<10;i++){
         
 		std::cout
 		<< "---" << std::endl << test_point << std::endl << "---" << std::endl
-		<< tunnel.getState(test_point).firstSpatialDerivative << std::endl;
+		<< tunnel.getState(test_point).value << std::endl;
 		Eigen::Vector3d delta(0.5,0,0);
 		test_point = test_point + delta;
         
