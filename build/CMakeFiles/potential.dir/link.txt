@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -O3   CMakeFiles/potential.dir/src/main.cpp.o  -o potential 
